@@ -4,56 +4,40 @@
         <title>Cheakbox</title>
          <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
         <style>
-            *
-            {
-                margin:0;
-                padding:0;
-            }
-           html,body
-            {
-                height:100%;
-            }
-            .common
-            {
-                height:200px;
-                width:200px;
-                border:1px solid black;
-            }
-            input[type=checkbox]:checked ~checkbox
-            {
-                background-color: green;
-            }
-            .horizontal
-            {
-                border:1px solid black;
-                height:100px;
-                width:700px;
-            }
-            input[type=checkbox]:checked ~horizontal
-            {
-                width:100px;
-            }
+.outerbox
+{
+    height:200px;
+    width:200px;
+    border:1px solid black;
+    display:inline-block;
+}
 
-            span
+input[type=checkbox] , lable {
+    margin:5% 3%;
+    z-index:2;
+    cursor: pointer;
+
+}
+            .innerbox
             {
-                display:block;
-                height:189px;
-                width:200px;
+                height:83%;
+                width:100%;
+                z-index:1;
             }
-
-
+     input[type=checkbox]:checked ~ *{
+   background-color: green;
+}
 
         </style>
 
     </head>
 <body>
+    <div class="outerbox"><input type="checkbox"><lable>check me!!</lable><div class="innerbox"></div></div>
+    <div class="outerbox"><input type="checkbox"><lable>check me!!</lable><div class="innerbox"></div></div>
+    <div class="outerbox"><input type="checkbox"><lable>check me!!</lable><div class="innerbox"></div></div>
+    <div class="outerbox"><input type="checkbox"><lable>check me!!</lable><div class="innerbox"></div></div>
+    <div class="outerbox"><input type="checkbox"><lable>check me!!</lable><div class="innerbox"></div></div>
 
-    <div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-    <div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-<div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-<div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-<div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-<div class="common"><input type="checkbox"><span class="checkbox">tick me!!!!</span></input></div>
-<input type="checkbox"><div class="horizontal">tickme!!</div></input>
+
 </body>
 </html>
