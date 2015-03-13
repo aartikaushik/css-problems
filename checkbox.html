@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>Cheakbox</title>
-         <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
+         <link type="text/css" rel="stylesheet"    href="css/normalize.css"/>
         <style>
      .outerbox
       {
+          position:relative;
          height:200px;
          width:200px;
          border:1px solid black;
@@ -14,6 +15,7 @@
 
       input[type=checkbox] , lable
         {
+            position:relative;
           margin:5% 3%;
           z-index:2;
           cursor: pointer;
@@ -21,9 +23,12 @@
         }
             .innerbox
             {
-                height:83%;
+                position:absolute;
+                height:100%;
                 width:100%;
                 z-index:1;
+                top:0;
+                left:0;
             }
        input[type=checkbox]:checked ~ *
             {
