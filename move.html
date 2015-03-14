@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+
+    <title>Move</title>
+         <link type="text/css" rel="stylesheet"    href="css/normalize.css"/>
+        <style>
+            html,body {
+                height:100%;
+            }
+            .container {
+                height:100%;
+                width:100%;
+                border:1px solid black;
+            }
+       .box {
+           height:200px;
+           width:200px;
+           display:inline-block;
+           border:1px solid black;
+           position:relative;
+           top:34%;
+           left:10%;
+           transition-delay: 2s;
+            }
+        .box:hover
+            {
+           position:relative;
+           top:0;
+           left:10%;
+
+
+            }
+            input[type=checkbox] , lable
+        {
+            position:relative;
+          z-index:2;
+          cursor: pointer;
+
+        }
+            .innerbox
+            {
+                position:absolute;
+                top:0;
+                left:0;
+                height:100%;
+                width:100%;
+                z-index:1;
+                border:1px solid yellow;
+            }
+        input[type="checkbox"]:checked ~ *
+            {
+                position: relative;
+                top:100%;
+            }
+
+        </style>
+
+    </head>
+
+
+<body>
+<div class="container">
+    <div class="box"><input type="checkbox"><lable>tick me!</lable>
+        <div class="innerbox"></div>
+    </div>
+    <div class="box"><input type="checkbox"><lable>tick me!</lable>
+        <div class="innerbox"></div></div>
+    <div class="box"><input type="checkbox"><lable>tick me!</lable>
+        <div class="innerbox"></div></div>
+    <div class="box"><input type="checkbox"><lable>tick me!</lable>
+        <div class="innerbox"></div></div>
+    <div class="box"><input type="checkbox"><lable>tick me!</lable>
+        <div class="innerbox"></div></div>
+    </div>
+</body>
+</html>
